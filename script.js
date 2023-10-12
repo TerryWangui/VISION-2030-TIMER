@@ -1,4 +1,7 @@
+// grabbing all the countdown timers
 const countItems=document.querySelectorAll(".timer span");
+
+// variables to store the future date
 var year=2030;
 var month=1;
 var day=1;
@@ -8,6 +11,7 @@ var seconds=0;
 const futureDate= new Date(year,month,day,hours,minutes,seconds);
 var endTime=futureDate.getTime();
 
+// function to calculate the remaining time in milliseconds
 function getremainingTime(){
     var currentTime=new Date().getTime();
     var remainingTime=endTime-currentTime; 
@@ -26,6 +30,7 @@ function getremainingTime(){
    const oneMinute=60*1000;
    const oneSecond=1000;
 
+//    dividing the remaining milliseconds into years,monts,days,hours,minutes,seconds
    var rYears=Math.floor(remainingTime/oneYear);
    var rMonths=Math.floor((remainingTime%oneYear)/oneMonth);
    var rDays=Math.floor((remainingTime%oneMonth)/oneDay);
@@ -35,6 +40,7 @@ function getremainingTime(){
 
    const rValues=[rYears,rMonths,rDays,rHours,rMinutes,rSeconds];
 
+//    function to format the dates into double digits
    function formatDigits(item){
     if(item<10){
         return`0${item}`;
@@ -42,6 +48,8 @@ function getremainingTime(){
     }
     return item;
    }
+
+//    updating the remaining time in the countdown timers
    countItems.forEach((item,index)=>{
     item.innerHTML= formatDigits(rValues[index]);
    });
@@ -51,5 +59,7 @@ function getremainingTime(){
    }
 
 }
+
+// setting intervals to update countdown timers every one second
 let countDown=setInterval(getremainingTime,1000);
 getremainingTime();
