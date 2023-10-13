@@ -3,7 +3,7 @@ const countItems=document.querySelectorAll(".timer span");
 
 // variables to store the future date
 var year=2030;
-var month=1;
+var month=0;
 var day=1;
 var hours=12;
 var minutes=0;
