@@ -8,11 +8,11 @@ body{
     height: 100vh;
     display: flex ;
     justify-content: center;
-    background-color: #663399;
+    background-color: #3c1d54;
     color: white;
 }
 /*nav styles*/
-header{
+header{ 
     position: absolute;
     top: 0;
     left: 0;
@@ -21,8 +21,8 @@ header{
     justify-content: flex-end;
     align-items: center;
     padding: 0 2rem;
-
     height: 2.5rem;
+
 }
 header nav .nav-links a{
     color: #fff;
@@ -105,5 +105,9 @@ header nav .nav-links a:hover{
     text-decoration: underline !important;
     padding: 0.5rem 0;
 }
-
+.tiles{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
 
