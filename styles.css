@@ -5,11 +5,12 @@
 }
 body{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex ;
     justify-content: center;
     background-color: #3c1d54;
     color: white;
+    overflow-y: scroll;
 }
 /*nav styles*/
 header{ 
@@ -52,7 +53,7 @@ header nav .nav-links a:hover{
     position: absolute;
     top: 0.5rem;
     text-align: center;
-    font-size: 60px;
+    font-size: 45px;
     text-transform: uppercase;
 }
 /* container that holds the countdown timers */
@@ -87,7 +88,7 @@ header nav .nav-links a:hover{
 
 @media(max-width:800px){
     .countdown-container{
-        margin-top: 5rem;
+        margin-top: 7rem;
         width: 90%;
         flex-wrap: wrap;
     }
@@ -106,8 +107,41 @@ header nav .nav-links a:hover{
     padding: 0.5rem 0;
 }
 .tiles{
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    margin: 0.5rem auto 0;
 }
+.tile{
+    padding: 1rem ;
+    background-color: #FFA500;
+    color: black;
+    border-radius: 10px;
+    width: 45%;
 
+}
+.tile h3{
+    text-transform: capitalize;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    margin: 1rem;
+}
+.tile p{
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    margin: 1rem;
+}
+@media(max-width:800px){
+    .tiles{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .tile{
+        width: 100%;
+        margin:1rem 0 ;
+    }
+    
+}
