@@ -17,3 +17,34 @@ a{
     letter-spacing: 0.1rem;
     cursor: pointer;
 }
+/*nav styles*/
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 2rem;
+
+    height: 2.5rem;
+
+}
+header nav .nav-links a{
+    color: #fff;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    margin:  0.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+
+}
+header nav .nav-links a:hover{
+    color: #FFA500;
+}
+.line{
+    text-decoration: underline !important;
+    padding: 0.5rem 0;
+}
